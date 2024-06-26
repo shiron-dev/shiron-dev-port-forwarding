@@ -13,7 +13,7 @@ RUN mkdir /usr/local/src && apk add binutils --no-cache\
 
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so
 WORKDIR /usr/local/src
-RUN git clone -b ${GIT_TAG} https://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git
+RUN git clone --depth 1 -b ${GIT_TAG} https://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git
 ENV USE_MUSL=YES
 RUN cd SoftEtherVPN_Stable &&\
   git submodule init &&\
