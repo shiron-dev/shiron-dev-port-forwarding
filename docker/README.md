@@ -1,6 +1,6 @@
 # Docker SoftEther VPN
 
-This is a Dockerfile for SoftEther VPN Server/Client.
+This is a Dockerfile for SoftEther VPN Server/Client and docker compose sample for SoftEther VPN Server/Client.
 
 ## Usage
 
