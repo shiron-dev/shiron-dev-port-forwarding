@@ -1,0 +1,29 @@
+services:
+  sevpn:
+    build:
+      context: sevpn/.
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    restart: always
+    # ports:
+    #   - 530:53
+    #   - 444:443
+    #   - 992:992
+    #   - 1194:1194/udp
+    #   - 5555:5555
+    #   - 500:500/udp
+    #   - 4500:4500/udp
+    #   - 1701:1701/udp
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "./volume_data/softether_data:/mnt"
+      - "./volume_data/softether_log:/root/server_log"
+      - "./volume_data/softether_packetlog:/root/packet_log"
+      - "./volume_data/softether_securitylog:/root/security_log"
+    privileged: true
+  # busybox:
+  #   image: busybox
+  #   command: tail -f /dev/null
+  #   network_mode: "service:sevpn"
