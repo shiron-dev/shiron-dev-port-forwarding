@@ -42,7 +42,6 @@ RUN ln -s /mnt/vpn_client.config vpn_client.config && \
 COPY --from=builder /usr/local/src/SoftEtherVPN_Stable/bin/vpnclient/vpnclient /usr/local/src/SoftEtherVPN_Stable/bin/vpncmd/vpncmd /usr/local/src/SoftEtherVPN_Stable/bin/vpnclient/hamcore.se2 ./
 COPY ./interfaces /etc/network/interfaces
 COPY --chmod=777 ./nic.sh /usr/local/bin/nic.sh
-COPY --chmod=777 ./resolv.conf /usr/local/bin/resolv.conf
 
 COPY --chmod=777 docker-entrypoint.sh /tmp
 
