@@ -44,8 +44,9 @@ COPY ./interfaces /etc/network/interfaces
 COPY --chmod=777 ./nic.sh /usr/local/bin/nic.sh
 COPY --chmod=777 ./resolv.conf /usr/local/bin/resolv.conf
 
+COPY --chmod=777 docker-entrypoint.sh /tmp
 
-RUN apk add --no-cache busybox bind-tools
+ENV VPN_DOMAIN=vpn.example.com
 
 USER root
-CMD ["/usr/local/bin/vpnclient", "execsvc"]
+ENTRYPOINT ["/tmp/docker-entrypoint.sh"]
