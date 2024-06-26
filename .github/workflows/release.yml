@@ -43,7 +43,7 @@ jobs:
       - name: Build and push (server)
         uses: docker/build-push-action@v6
         with:
-          context: server-sevpn
+          context: docker/server/sevpn
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/server-sevpn:latest
@@ -51,7 +51,7 @@ jobs:
       - name: Build and push (client)
         uses: docker/build-push-action@v6
         with:
-          context: client-sevpn
+          context: docker/client/sevpn
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/client-sevpn:latest
