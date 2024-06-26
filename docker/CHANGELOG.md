@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/shiron-dev/port-forwarding/compare/docker-v1.0.3...docker-v1.0.4) (2024-06-26)
+
+
+### Bug Fixes
+
+* re release docker ([#14](https://github.com/shiron-dev/port-forwarding/issues/14)) ([e391626](https://github.com/shiron-dev/port-forwarding/commit/e391626898407c825dd04f2b7589d9b5f64cc4e4))
+
 ## [1.0.3](https://github.com/shiron-dev/port-forwarding/compare/docker-v1.0.2...docker-v1.0.3) (2024-06-26)
 
 
