@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    "docker": {
+      "release-type": "simple",
+      "package-name": "docker"
+    }
+  }
+}
