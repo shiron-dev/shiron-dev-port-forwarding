@@ -1,4 +1,4 @@
-FROM alpine as builder
+FROM alpine@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099 as builder
 ARG GIT_TAG=v4.41-9782-beta
 RUN mkdir /usr/local/src && apk add binutils --no-cache\
   build-base \
@@ -22,7 +22,7 @@ RUN cd SoftEtherVPN_Stable &&\
   make
 RUN ls /usr/local/src/SoftEtherVPN_Stable/bin/vpnclient
 
-FROM alpine
+FROM alpine@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099
 
 RUN apk add --no-cache readline \
   openssl \
